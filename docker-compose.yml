@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  express_app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: tetstttttt
+    restart: always
+    ports:
+      - "3488:3488"
+    volumes:
+      - /app/node_modules
+      - .:/app
